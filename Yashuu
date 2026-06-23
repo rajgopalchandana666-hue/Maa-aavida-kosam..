@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>For You ❤️</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:#050505;
+color:white;
+font-family:'Comic Neue',cursive;
+overflow-x:hidden;
+
+}
+
+
+section{
+
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
+padding:20px;
+
+}
+
+
+
+.title{
+
+font-size:45px;
+animation:show 2s ease;
+
+}
+
+
+.sub{
+
+margin-top:20px;
+font-size:22px;
+color:#ffb6c9;
+
+}
+
+
+
+button{
+
+margin-top:40px;
+padding:15px 35px;
+border-radius:30px;
+border:none;
+background:#ff4f81;
+color:white;
+font-size:18px;
+
+}
+
+
+
+.card{
+
+background:#111;
+padding:30px;
+border-radius:25px;
+margin:20px;
+box-shadow:0 0 25px #ff4f81;
+
+}
+
+
+
+.gif{
+
+width:150px;
+
+}
+
+
+
+.cats{
+
+display:flex;
+gap:30px;
+flex-wrap:wrap;
+justify-content:center;
+
+}
+
+
+
+.cats div{
+
+font-size:15px;
+color:#ff9bb8;
+
+}
+
+
+
+.cake{
+
+font-size:100px;
+animation:bounce 2s infinite;
+
+}
+
+
+
+.heart{
+
+position:fixed;
+font-size:20px;
+animation:fall 5s linear infinite;
+
+}
+
+
+
+@keyframes show{
+
+from{
+opacity:0;
+transform:translateY(50px);
+}
+
+to{
+opacity:1;
+}
+
+}
+
+
+@keyframes bounce{
+
+50%{
+transform:translateY(-20px);
+}
+
+}
+
+
+@keyframes fall{
+
+from{
+
+transform:translateY(-100px);
+
+}
+
+to{
+
+transform:translateY(100vh);
+
+}
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+
+<section>
+
+
+<h1 class="title">
+
+Happy Birthday nanna..❤️
+
+</h1>
+
+
+<p class="sub">
+
+A small surprise made with lots of love ✨
+
+</p>
+
+
+<button onclick="openLove()">
+
+Open 💌
+
+</button>
+
+
+</section>
+
+
+
+
+<section>
+
+
+<h1>
+
+Our Favourite Cats 🐱
+
+</h1>
+
+
+<br>
+
+
+<div class="cats">
+
+
+<div>
+
+<img class="gif" src="https://media.tenor.com/3bTXt1vJ8JAAAAAi/cute-cat.gif">
+
+<p>Says hi 👋</p>
+
+</div>
+
+
+
+<div>
+
+<img class="gif" src="https://media.tenor.com/qUQJq9rN5LAAAAAi/cat-love.gif">
+
+<p>Sends love ❤️</p>
+
+</div>
+
+
+
+
+<div>
+
+<img class="gif" src="https://media.tenor.com/7W8hY2o4JwAAAAAi/cat-cake.gif">
+
+<p>You 🎂</p>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+<section>
+
+
+<h1>
+
+Make a wish ✨
+
+</h1>
+
+
+<div class="cake">
+
+🎂
+
+</div>
+
+
+<p>
+
+Cut the cake and celebrate 🎉
+
+</p>
+
+
+</section>
+
+
+
+
+<script>
+
+
+function openLove(){
+
+alert("You are my favourite memory ❤️");
+
+}
+
+
+
+setInterval(()=>{
+
+
+let h=document.createElement("div");
+
+h.className="heart";
+
+h.innerHTML="❤️";
+
+
+h.style.left=Math.random()*100+"%";
+
+
+document.body.appendChild(h);
+
+
+setTimeout(()=>{
+
+h.remove();
+
+},5000);
+
+
+},500);
+
+
+
+</script>
+
+
+</body>
+
+</html>
